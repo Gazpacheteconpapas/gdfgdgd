@@ -40,10 +40,10 @@ void loop() {
       uint16_t joystickMax = XboxControllerNotificationParser::maxJoy;
 
       // Control del servo de rotación continua con el joystick derecho
-      if (xboxController.xboxNotif.dpadUp) {valorlim=valorlim+5;}
-      if (xboxController.xboxNotif.dpadDown) {valorlim=valorlim-5;}
+      if (xboxController.xboxNotif.btnDirUp) {valorlim=valorlim+5;}
+      if (xboxController.xboxNotif.btnDirDown) {valorlim=valorlim-5;}
       int joyValue = xboxController.xboxNotif.joyRVert;
-      if
+      
       // Definimos una zona muerta alrededor del centro del joystick para evitar fluctuaciones
       if (joyValue < 30000) {
         // El joystick está hacia abajo, rotación en un sentido
